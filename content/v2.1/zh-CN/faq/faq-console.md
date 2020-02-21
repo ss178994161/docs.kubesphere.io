@@ -50,6 +50,7 @@ $ kubectl scale --replicas=0 deployment/ks-console -n kubesphere-system
 如果还没安装，安装前在 installer 可以修改 common.yaml 配置文件中的 `kubelet_max_pods`。
 
 KubeSphere 安装后，可以在后台手工修改 master 节点 `/etc/kubernetes/kubelet.env` 中的 `max-pods` 参数，然后执行`systemctl restart kubelet` 重启 kubelet 服务。
+All-in-One环境安装后需要在后台手工修改`/etc/kubernetes/kubelet-config.yaml`中的`max-Pods` 参数，然后执行`systemctl restart kubelet` 重启 kubelet 服务。
 
 5、我在后台通过 kubectl 创建的 namespace 以及该 namespace 下的资源，要如何添加到企业空间 (workspace) 下呢？
 
